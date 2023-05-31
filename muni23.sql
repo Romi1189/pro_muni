@@ -70,10 +70,20 @@ INSERT INTO `cargo` (`id`, `descripcion`) VALUES
 
 CREATE TABLE `persona` (
   `id_persona` int(100) NOT NULL,
-  `nombre` varchar(50) NOT NULL,
-  `apellido` varchar(25) NOT NULL,
-  `dni` int(8) NOT NULL,
+  `nombre1` varchar(50) NOT NULL,
+  `nombre2` varchar(50) NOT NULL,
+  `apellido1` varchar(25) NOT NULL,
+  `apellido2` varchar(25) NOT NULL,
+  `sexo` varchar(20) NOT NULL,
+  `dni` char(8) NOT NULL,
+  `cuil` char(11) NOT NULL,
+  `direccion` varchar(100) NOT NULL,
+  `contacto` varchar(20) NOT NULL,
+  `correo` varchar(100) NOT NULL,
   `categoria` int(100) NOT NULL,
+  `cargo` varchar(50) NOT NULL,
+  `sector` int(10) NOT NULL,
+  `persona_estado` varchar(50) NOT NULL,
   `estado` int(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -81,11 +91,9 @@ CREATE TABLE `persona` (
 -- Volcado de datos para la tabla `persona`
 --
 
-INSERT INTO `persona` (`id_persona`, `nombre`, `apellido`, `dni`, `categoria`, `estado`) VALUES
-(1, 'marcela', 'moreno', 98763542, 91, 1),
-(2, ' Angelica', 'Reinoso', 32083872, 666, 1),
-(3, 'gabriel', 'morales', 40175342, 9876, 1),
-(4, 'Beatriz', 'Russo', 40345678, 12, 1);
+INSERT INTO `persona`(`id_persona`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `sexo`, `dni`, `cuil`, `direccion`, `contacto`, `correo`, `categoria`, `cargo`, `sector`, `persona_estado`, `estado`) 
+VALUES ('','Celeste','Rosa','Ruiz','Cabrera','femenino','28345786','27283457869','B° Bicentenario','2652354876','rositabonita@gmail.com','16','Administrativo','2','activo','1');
+
 
 -- --------------------------------------------------------
 
