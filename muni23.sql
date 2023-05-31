@@ -87,8 +87,7 @@ CREATE TABLE `persona` (
 --
 
 INSERT INTO `persona` (`id_persona`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `sexo`, `dni`, `cuil`, `direccion`, `contacto`, `correo`, `categoria`, `cargo`, `sector`, `persona_estado`, `estado`) VALUES
-(1, 'Romina', 'Belén', 'Davila', '', 'Femenino', '33836224', '27338362248', 'B° Presidente Peon II Mz.:C C.:1 - Las Tapias - Angaco', '2646089217', 'rominabdavila@gmail.com', 8, 'Desarrolador', 1, 'Activo', 1),
-(2, 'Victoria', 'Isabel', 'Davila', '', 'Femenino', '50946765', '27509467655', 'B° Presidente Perón II Mz.:C  C.:1 - Las Tapias - Angaco', '2646089207', '', 2, 'Estudiante', 3, 'Activo', 1),
+
 (10, 'Cecilia', 'Verónica', 'Davila', '', 'Femenino', '28938940', '27289389402', 'Las Tapias', '2648984909', 'ceciliavdavila@gmail.com', 30, 'Desarrollador', 2, 'Activo', 1),
 (11, 'José', '', 'Perez', '', 'Masculino', '33678987', '', 'Angaco', '2649878038', '', 20, 'Administrativo', 3, 'Activo', 1),
 (12, 'Celeste', 'Rosa', 'Ruiz', 'Cabrera', 'femenino', '28345786', '27283457869', 'B° Bicentenario', '2652354876', 'rositabonita@gmail.com', 16, 'Administrativo', 2, 'activo', 1);
