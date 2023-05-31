@@ -1,6 +1,6 @@
 <?php
 
-require_once "../conexion.php";
+require_once "conexion.php";
 $sql = "SELECT * FROM persona";
 $resultado = $mysqli->query($sql);
 
@@ -19,13 +19,12 @@ $resultado = $mysqli->query($sql);
     <h2>Generar Reportes del Municipio</h2>
     <form action="reporte.php" method="post" autocomplete="off">
 
-        Ingresa los datos
-        <select id="persona" name="persona">
-            <option value="">Selecciona una opcion</option>
-            <?php while ($fila = $resultado->fetch_assoc()) { ?>
-                <option value="<?php echo $fila['id_persona']; ?>"><?php echo $fila['id_persona']; ?></option>
-            <?php } ?>
-        </select>
+     
+        <label id="persona" name="persona" value="">Escriba el nombre</label>
+           
+                
+                <input class="form-control" type="text" name="nombre1">
+     
 
         <br />
 
