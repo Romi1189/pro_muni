@@ -146,8 +146,8 @@ $query = "UPDATE `persona` SET `nombre1`='$nom1',`nombre2`='$nom2',`apellido1`='
             <div class="col-6">
             <label>Sector</label>
             <select name="sector" id="sector" class="form-control">
-                <option value="femenino">Planta Permanente</option>
-                <option value="masculino">Contratado</option>
+                <option value="plantaper">Planta Permanente</option>
+                <option value="contratado">Contratado</option>
             </select>
             </div>
             <div class="col-6">
