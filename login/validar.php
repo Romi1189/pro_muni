@@ -1,12 +1,12 @@
 <?php
 $usuario=$_POST['usuario'];
-$contraseña=$_POST['contraseña'];
+$contraseña=$_POST['password'];
 session_start();
 $_SESSION['usuario']=$usuario;
-
+$_SESSION['password']=$contraseña;
 $conexion=mysqli_connect("localhost","root","","muni23");
 
-$consulta="SELECT*FROM usuarios where usuario='$usuario' and contraseña='$contraseña'";
+$consulta="SELECT*FROM usuarios where usuario='$usuario' and password='$contraseña'";
 $resultado=mysqli_query($conexion,$consulta);
 
 $filas=mysqli_num_rows($resultado);

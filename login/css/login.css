@@ -62,7 +62,7 @@ input[type='submit']{
 
 }
 body{
-	background-image:url(IMG/LogoNuevo-1024x1024.png);
+	background-image:url(IMG/muni.jpg);
 	width: 100%;
 	height: 75%vh;
 	background-size: cover;
@@ -120,7 +120,7 @@ header a{
     transition: all ease 300ms;
 }
 .login-box{
-	background-image:url(IMG/LogoNuevo-1024x1024.png);
+	background-image:url(IMG/muni.jpg);
 	width: 75px;
 	height: 75px;
 	border-radius: 50%;

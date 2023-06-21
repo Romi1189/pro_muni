@@ -1,13 +1,13 @@
 <?php
-    // seguridad de sesiones paginacion
+session_start();
+$usu=$_SESSION["usuario"];
+$pass=$_SESSION['password'];
 
-    session_start();
-    $var_sesion= $_SESSION['usuario'];
-    if ($var_sesion== null || $var_sesion='') {
+
+    if ($usu== null || $usu='' && $pass== null || $pass='') {
       echo "No tienes Acceso";
       die();
     }
-
 
 ?>
 <!DOCTYPE html>
@@ -37,10 +37,11 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="https://municipiodeangaco.gob.ar/" class="nav-link">Página municipio</a>
+        <a href="iframe.php" class="nav-link">Página Principal</a>
       </li>
+     
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="https://municipiodeangaco.gob.ar/#informacion" class="nav-link">Contacto</a>
+        <a href="../../login/salir.php" class="nav-link">Cerrar sesión</a>
       </li>
     </ul>
 
@@ -122,12 +123,7 @@
                   <p>Personal</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="./index2.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Panilla</p>
-                </a>
-              </li>
+            
               <li class="nav-item">
                 <a href="./index3.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -232,3 +228,4 @@ DASSDASD-->
 <!--<script src="dist/js/demo.js"></script>-->
 </body>
 </html>
+
