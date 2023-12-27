@@ -11,19 +11,37 @@ if (isset($_POST['submit'])) {
     if (isset($_POST['anio'])) {
         $anio =  $_POST['anio'];
     }
-    if (isset($_POST['numero_exp'])) {
-        $num =  $_POST['numero_exp'];
+    if (isset($_POST['hoja'])) {
+        $num =  $_POST['hoja'];
     }
 
-
-    $query = "UPDATE  planilla
-            SET mes = '$mes',  anio = '$anio', numero_exp = '$num' 
-            WHERE id_plan= '$id'";
+    $query = "UPDATE  planilla SET mes = '$mes',  anio = '$anio', hoja = '$num'
+            WHERE id_img= '$id'";
     $result = mysqli_query($conn, $query);
     if ($result) {
-        $msg = "Actualización exitosa!";        
+       echo" 
+       <input type='checkbox' id='btn-modal1'>
+       <div class='container-modal'>
+       <div class='content-modal'>
+       <h2>¡¡¡Actualización exitosa!!! </h2>  
+       <div class='btn-cerrar'>
+       <label for='btn-modal1'><a href='index31.php'>Cerrar</a></label>
+       </div>
+       </div>
+       <label for='btn-modal1' class='cerrar-modal'></label>
+       </div>";        
     } else {
-        $msg = "Error al intentar actualizar los datos.";
+        echo" 
+        <input type='checkbox' id='btn-modal1'>
+        <div class='container-modal'>
+        <div class='content-modal'>
+        <h2>¡¡¡Error al actualizar!!! </h2>  
+        <div class='btn-cerrar'>
+        <label for='btn-modal1'><a href='in_dex.php'>Cerrar</a></label>
+        </div>
+        </div>
+        <label for='btn-modal1' class='cerrar-modal'></label>
+        </div>";
     }
 }
 ?>
@@ -34,13 +52,13 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Editar registro de organismo</title>
+    <title>Editar registro</title>
 </head>
 
 <body>    
                 <span><?php echo $msg; ?></span>
                 <?php
-                $query  = "SELECT * FROM planilla WHERE id_plan= '$id'";
+                $query  = "SELECT * FROM planilla WHERE id_img= '$id'";
                 $result  = mysqli_query($conn, $query);
                 while ($row = mysqli_fetch_assoc($result)) {
                 ?>
@@ -50,11 +68,14 @@ if (isset($_POST['submit'])) {
                         <input type="text" name="mes" value="<?php echo $row['mes']; ?>">
                         <label>Año:</label>
                         <input type="number" name="anio" value="<?php echo $row['anio']; ?>">
-                        <label>N° Exp.:</label>
-                        <input type="number" name="numero_exp" value="<?php echo $row['numero_exp']; ?>">
+                        <label>N° Hoja:</label>
+                        <input type="number" name="hoja" value="<?php echo $row['hoja']; ?>">
+                  
+                <img src="<?php echo $row['img'];?>" width=500px heigth=auto>
                         <p></p>
                         
-                        <button type="submit" name="submit">Guardar cambios</button>                        
+                        <button type="submit" name="submit">Guardar cambios</button>       
+                        <button><a href="index31.php">Volver</a></button>            
                     </form><p>
                 <?php
                 }

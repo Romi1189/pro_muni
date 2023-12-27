@@ -64,7 +64,7 @@
                     <td><a href="in_dex2.php?id=<?php echo $fila['id_img'];?>"><button class="btn btn-success btn-block" type="button">Descargar</button></a></td>
                     <td><a href="in_dex.php?id=<?php echo $fila['id_img'];?>"><button class="btn btn-warning btn-block" type="button">Editar</button></a></td>
 				
-                    <td><a href="eli_imagen.php?id=<?php echo $fila['id_img'];?>" onClick="return confirm('Seguro de esta acción? el archivo será eliminado y una vez eliminado no se podrá recuperar')"><button class="btn btn-danger btn-block" type="button" >Eliminar</button></a></td>
+                    <td><a href="eli_imagen.php?id=<?php echo $fila['id_img'];?>" onClick="return confirm('Seguro de esta acción? La <?php echo 'Hoja N°: '. $fila['hoja']. ' '; ?>será eliminado y una vez eliminado no se podrá recuperar')"><button class="btn btn-danger btn-block" type="button" >Eliminar</button></a></td>
                     </tr>
                     <?php
                    

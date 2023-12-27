@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-06-2023 a las 03:19:19
+-- Tiempo de generación: 27-12-2023 a las 00:29:52
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 7.4.27
 
@@ -41,7 +41,7 @@ CREATE TABLE `persona` (
   `correo` varchar(100) NOT NULL,
   `categoria` int(100) NOT NULL,
   `cargo` varchar(50) NOT NULL,
-  `sector` int(10) NOT NULL,
+  `sector` varchar(30) NOT NULL,
   `persona_estado` varchar(50) NOT NULL,
   `estado` int(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -51,12 +51,15 @@ CREATE TABLE `persona` (
 --
 
 INSERT INTO `persona` (`id_persona`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `sexo`, `dni`, `cuil`, `direccion`, `contacto`, `correo`, `categoria`, `cargo`, `sector`, `persona_estado`, `estado`) VALUES
-(1, 'Romina', 'Belén', 'Davila', '', 'Femenino', '33836224', '27338362248', 'B° Presidente Peon II Mz.:C C.:1 - Las Tapias - Angaco', '2646089217', 'rominabdavila@gmail.com', 8, 'Desarrolador', 1, 'Activo', 0),
-(2, 'Victoria', 'Isabel', 'Davila', '', 'Femenino', '50946765', '27509467655', 'B° Presidente Perón II Mz.:C  C.:1 - Las Tapias - Angaco', '2646089207', '', 2, 'Estudiante', 3, 'Activo', 0),
-(10, 'Cecilia', 'Verónica', 'Davila', '', 'Femenino', '28938940', '27289389402', 'Las Tapias', '2648984909', 'ceciliavdavila@gmail.com', 30, 'Desarrollador', 2, 'Activo', 1),
-(11, 'José', '', 'Perez', '', 'Masculino', '33678987', '', 'Angaco', '2649878038', '', 20, 'Administrativo', 3, 'Activo', 1),
-(12, 'Celeste', 'Rosa', 'Ruiz', 'Cabrera', 'femenino', '28345786', '27283457869', 'B° Bicentenario', '2652354876', 'rositabonita@gmail.com', 16, 'Administrativo', 2, 'activo', 1),
-(13, 'Alejandro', 'Agustin', 'Altamira', '', 'masculino', '23645879', '2023458799', 'Campo de batalla', '2647898123', '', 16, 'administrativo', 0, 'femenino', 1);
+(1, 'Romina', 'Belén', 'Davila', '', 'Femenino', '33836224', '27338362248', 'B° Presidente Peon II Mz.:C C.:1 - Las Tapias - Angaco', '2646089217', 'rominabdavila@gmail.com', 8, 'Desarrolador', '1', 'Activo', 0),
+(2, 'Victoria', 'Isabel', 'Davila', '', 'Femenino', '50946765', '27509467655', 'B° Presidente Perón II Mz.:C  C.:1 - Las Tapias - Angaco', '2646089207', '', 2, 'Estudiante', '3', 'Activo', 0),
+(10, 'Cecilia', '', 'Davila', '', 'Femenino', '28938940', '27289389402', 'Las Tapias', '2648984909', 'ceciliavdavila@gmail.com', 30, 'Desarrollador', '2', 'Activo', 1),
+(11, 'José', '', 'Perez', '', 'Masculino', '33678987', '', 'Angaco', '2649878038', '', 20, 'Administrativo', '3', 'Activo', 1),
+(12, 'Celeste', 'Rosa', 'Ruiz', 'Cabrera', 'femenino', '28345786', '27283457869', 'B° Bicentenario', '2652354876', 'rositabonita@gmail.com', 16, 'Administrativo', '2', 'activo', 1),
+(13, 'Alejandro', '', 'Altamira', '', 'masculino', '23645879', '2023458799', 'Campo de batalla', '2647898123', '', 16, 'administrativo', '2', 'activo', 1),
+(14, 'Victoria', '', 'Gomez', '', 'femenino', '67890546', '20678905465', 'Las Tapias', '264567345', '', 56, 'administrativo', '0', 'femenino', 0),
+(15, 'Mateo', '', 'Poblete', '', 'masculino', '28938940', '20289389407', 'el alamito', '26454678234', '', 30, 'Administrativo', '30', 'Activo', 1),
+(16, 'Juan', '', 'Lario', '', 'masculino', '23456987', '', 'Campo de batalla', '', '', 20, 'ordenanza', 'planta', 'activo', 0);
 
 -- --------------------------------------------------------
 
@@ -77,9 +80,8 @@ CREATE TABLE `planilla` (
 --
 
 INSERT INTO `planilla` (`id_img`, `hoja`, `mes`, `anio`, `img`) VALUES
-(20, 56, 'enero', 2000, 'fotosmuni/LOGO.jpg'),
-(21, 90, 'Abril', 2022, 'fotosmuni/equipo.jpg'),
-(25, 23, 'enero', 2016, 'fotosmuni/ip.PNG');
+(21, 94, 'diciembre', 2022, 'fotosmuni/equipo.jpg'),
+(26, 10, 'enero', 2023, 'fotosmuni/atrapa2.jpg');
 
 -- --------------------------------------------------------
 
@@ -132,13 +134,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `persona`
 --
 ALTER TABLE `persona`
-  MODIFY `id_persona` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_persona` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `planilla`
 --
 ALTER TABLE `planilla`
-  MODIFY `id_img` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id_img` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`

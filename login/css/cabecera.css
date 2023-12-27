@@ -23,3 +23,8 @@
     background-position: right;
     position: absolute;
 }
+@media (max-width:480px){
+	form{
+width:100%;
+	}
+}

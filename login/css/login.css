@@ -128,3 +128,8 @@ header a{
 	top: -50px;
 	left: calc(50% - 50px);
 }
+@media (max-width:480px){
+	form{
+width:100%;
+	}
+}

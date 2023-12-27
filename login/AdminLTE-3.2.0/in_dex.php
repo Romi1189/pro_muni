@@ -11,7 +11,6 @@ $pass=$_SESSION['password'];
 
 ?>
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -25,6 +24,7 @@ $pass=$_SESSION['password'];
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="emergente.css">
 </head>
 <!--
 `body` tag options:
@@ -64,8 +64,7 @@ $pass=$_SESSION['password'];
               <div class="input-group-append">
                 <button class="btn btn-navbar" type="submit">
                   <i class="fas fa-search"></i>
-                  <?php
-      ?>
+          
                 </button>
                 <button class="btn btn-navbar" type="button" data-widget="navbar-search">
                   <i class="fas fa-times"></i>
@@ -141,7 +140,7 @@ $pass=$_SESSION['password'];
               <li class="nav-item">
                 <a href="./index31.php" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Carga de Planillas</p>
+                  <p>PDF Archivos</p>
                 </a>
               </li>
             </ul>
@@ -162,7 +161,7 @@ $pass=$_SESSION['password'];
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-            <!--  <li class="breadcrumb-item"><button><a href="index1.php">Volver</a></button></li>
+            <!-- <li class="breadcrumb-item"></li>
               <li class="breadcrumb-item active">Organismo</li>-->
             </ol>
           </div><!-- /.col -->

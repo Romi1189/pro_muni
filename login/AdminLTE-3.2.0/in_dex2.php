@@ -141,7 +141,7 @@ $pass=$_SESSION['password'];
               <li class="nav-item">
                 <a href="./index31.php" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Carga de Planillas</p>
+                  <p>PDF Archivos</p>
                 </a>
               </li>
             </ul>

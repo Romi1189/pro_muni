@@ -86,29 +86,29 @@
 	<div class="col-6">
 	<label>Cargo:</label>
 	<select name="cargo" id="cargo" class="form-control">
-                <option value="administrativo">Administrativo</option>
-                <option value="ordenanza">Ordenanza</option>
-                <option value="obrero">Obrero</option>
-                <option value="capgen">Capataz General</option>
-                <option value="concejal">Concejal</option>
-                <option value="seccondel">Secretario Con. Deliberante</option>
-                <option value="intendente">Intendente</option>
+                <option value="Administrativo">Administrativo</option>
+                <option value="Ordenanza">Ordenanza</option>
+                <option value="Obrero">Obrero</option>
+                <option value="Capataz general">Capataz General</option>
+                <option value="Concejal">Concejal</option>
+                <option value="Secretario H.C.D">Secretario Con. Deliberante</option>
+                <option value="Intendente">Intendente</option>
                 
             </select><br>
     </div>
 	<div class="col-6">
 	<label>Sector:</label>
 	<select name="sector" id="sector" class="form-control">
-        <option value="femenino">Planta Permanente</option>
-        <option value="masculino">Contratado</option>
+        <option value="planta">Planta Permanente</option>
+        <option value="contratado">Contratado</option>
     </select>
     </div>
 	<div class="col-6">
 	<label>Estado:</label>
 	<select name="persona_estado" id="persona_estado" class="form-control">
-        <option value="femenino">Activo</option>
-        <option value="masculino">Jubilado</option>
-		<option value="masculino">Fallecido</option>
+        <option value="Activo">Activo</option>
+        <option value="Jubilado">Jubilado</option>
+		<option value="Fallecido">Fallecido</option>
     </select>
 	<br>
 	</div>
